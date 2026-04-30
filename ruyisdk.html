@@ -1,52 +1,153 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RuyiSDK 实习记录 | Selene</title>
+  <title>RuyiSDK Internship Record | SHENG HAILING</title>
   <style>
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-      max-width: 760px;
-      margin: 48px auto;
-      padding: 0 16px;
-      line-height: 1.6;
+    :root {
+      --bg: #f7f4ef;
+      --card: rgba(255, 255, 255, 0.78);
+      --text: #171717;
+      --muted: #66615a;
+      --line: #ddd6cc;
+      --accent: #2f5d62;
     }
-    h1 { margin: 0 0 8px; }
-    .muted { color: #666; margin: 0 0 24px; }
-    .card { border: 1px solid #eee; border-radius: 12px; padding: 16px; margin: 12px 0; }
-    ul { padding-left: 18px; }
-    a { text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .back { display: inline-block; margin-bottom: 16px; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "Noto Serif", "Songti SC", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .hero {
+      margin-bottom: 34px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px 20px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .card li {
+      margin: 8px 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 36px 16px 56px;
+      }
+
+      .card {
+        padding: 18px 16px;
+      }
+    }
   </style>
 </head>
 <body>
-  <a class="back" href="./index.html">← 返回首页</a>
+  <main class="container">
+    <a class="back" href="./index.html">← Back to Home</a>
 
-  <h1>RuyiSDK 实习记录</h1>
-  <p class="muted">这里用于整理和展示我在 RuyiSDK 实习期间的学习记录与相关产出。</p>
+    <section class="hero">
+      <h1>RuyiSDK Internship Record</h1>
+      <p>
+        A record of my internship-related notes, reports, and community outputs during the RuyiSDK internship.
+      </p>
+    </section>
 
- <div class="card">
-  <h2>周报 / 月报</h2>
-  <ul>
-    <li><a href="https://github.com/shenghailing00-stack/ruyisdk-weekly" target="_blank" rel="noreferrer">RuyiSDK Weekly Reports</a></li>
-  </ul>
-</div>
+    <section class="grid">
+      <div class="card">
+        <h2>Weekly / Monthly Reports</h2>
+        <ul>
+          <li><a href="https://github.com/shenghailing00-stack/ruyisdk-weekly" target="_blank" rel="noreferrer">RuyiSDK Weekly Reports</a></li>
+        </ul>
+      </div>
 
-<div class="card">
-  <h2>技术笔记</h2>
-  <ul>
-    <li><a href="https://github.com/shenghailing00-stack/ruyisdk-intern/tree/main/notes" target="_blank" rel="noreferrer">RuyiSDK Notes</a></li>
-  </ul>
-</div>
+      <div class="card">
+        <h2>Technical Notes</h2>
+        <ul>
+          <li><a href="https://github.com/shenghailing00-stack/ruyisdk-intern/tree/main/notes" target="_blank" rel="noreferrer">RuyiSDK Notes</a></li>
+        </ul>
+      </div>
 
-<div class="card">
-  <h2>发帖记录</h2>
-  <ul>
-    <li><a href="https://ruyisdk.cn/t/topic/2653" target="_blank" rel="noreferrer">RuyiSDK 安装与初次使用笔记</a></li>
-  </ul>
-</div>
-
+      <div class="card">
+        <h2>Forum Posts</h2>
+        <ul>
+          <li><a href="https://ruyisdk.cn/t/topic/2653" target="_blank" rel="noreferrer">RuyiSDK 安装与初次使用笔记</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
