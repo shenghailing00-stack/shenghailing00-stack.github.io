@@ -1,51 +1,161 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>学习资源清单</title>
+  <title>Learning Resources | SHENG HAILING</title>
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-           max-width: 760px; margin: 48px auto; padding: 0 16px; line-height: 1.6; }
-    a { text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .muted { color: #666; }
-    .card { border: 1px solid #eee; border-radius: 12px; padding: 16px; margin: 12px 0; }
+    :root {
+      --bg: #f7f4ef;
+      --card: rgba(255, 255, 255, 0.78);
+      --text: #171717;
+      --muted: #66615a;
+      --line: #ddd6cc;
+      --accent: #2f5d62;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "Noto Serif", "Songti SC", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .hero {
+      margin-bottom: 34px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px 20px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .card li {
+      margin: 8px 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 36px 16px 56px;
+      }
+
+      .card {
+        padding: 18px 16px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>学习资源清单</h1>
-  <p class="muted">我正在学习的课程 / 资料链接（持续更新）</p>
+  <main class="container">
+    <a class="back" href="./index.html">← Back to Home</a>
 
-  <div class="card">
-    <h2>算法 / 数据结构</h2>
-    <ul>
-      <li>The Missing Semester of Your CS Education</li>
-      <li>CS61A</li>
-      <li>MIT6.100L</li>
-      <li>代码随想录题单</li>
-      <li>luogu&leetcode</li>
-    </ul>
-  </div>
+    <section class="hero">
+      <h1>Learning Resources</h1>
+      <p>
+        A collection of courses, materials, and references that I am currently using or plan to explore.
+      </p>
+    </section>
 
-  <div class="card">
-    <h2>编程语言</h2>
-    <ul>
-      <li>python</li>
-      <li>C++</li>
-      <li>SQL</li>
-    </ul>
-  </div>
+    <section class="grid">
+      <div class="card">
+        <h2>Algorithms &amp; Data Structures</h2>
+        <ul>
+          <li>The Missing Semester of Your CS Education</li>
+          <li>CS61A</li>
+          <li>MIT 6.100L</li>
+          <li>Codeforces Problem Sets</li>
+          <li>Luogu &amp; LeetCode</li>
+        </ul>
+      </div>
 
-  <div class="card">
-    <h2>数学</h2>
-    <ul>
-      <li>高等数学</li>
-      <li>线性代数</li>
-      <li>离散数学</li>
-    </ul>
-  </div>
+      <div class="card">
+        <h2>Programming Languages</h2>
+        <ul>
+          <li>Python</li>
+          <li>C++</li>
+          <li>SQL</li>
+        </ul>
+      </div>
 
-  <p><a href="./">← 返回首页</a></p>
+      <div class="card">
+        <h2>Mathematics</h2>
+        <ul>
+          <li>Advanced Mathematics</li>
+          <li>Linear Algebra</li>
+          <li>Probability and Statistics</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
