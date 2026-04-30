@@ -5,47 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Film & Media Portfolio | SHENG HAILING</title>
   <style>
+    :root {
+      --bg: #f7f4ef;
+      --card: rgba(255, 255, 255, 0.78);
+      --text: #171717;
+      --muted: #66615a;
+      --line: #ddd6cc;
+      --accent: #2f5d62;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-      max-width: 760px;
-      margin: 48px auto;
-      padding: 0 16px;
-      line-height: 1.6;
-      color: #111;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "Noto Serif", "Songti SC", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
-    h1 { margin: 0 0 8px; }
-    .muted { color: #666; margin: 0 0 24px; }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .hero {
+      margin-bottom: 34px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
     .card {
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 16px;
-      margin: 12px 0;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px 20px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
     }
-    ul { padding-left: 18px; }
-    a { text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .back { display: inline-block; margin-bottom: 16px; }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .card li {
+      margin: 8px 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 36px 16px 56px;
+      }
+
+      .card {
+        padding: 18px 16px;
+      }
+    }
   </style>
 </head>
 <body>
-  <a class="back" href="./index.html">← Back to Home</a>
+  <main class="container">
+    <a class="back" href="./index.html">← Back to Home</a>
 
-  <h1>Film & Media Portfolio</h1>
-  <p class="muted">A selected collection of my microfilms and scriptwriting works.</p>
+    <section class="hero">
+      <h1>Film &amp; Media Portfolio</h1>
+      <p>
+        A selected collection of my microfilms and scriptwriting works.
+      </p>
+    </section>
 
-<div class="card">
-  <h2>Microfilms</h2>
-  <ul>
-    <li><a href="https://www.bilibili.com/video/BV1xx9aBPE4g/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=dbe443b875d70b7b8f918fb559cbac94" target="_blank" rel="noreferrer">AIGC Microfilm: 丝路未央</a></li>
-  </ul>
-</div>
+    <section class="grid">
+      <div class="card">
+        <h2>Microfilms</h2>
+        <ul>
+          <li>
+            <a href="https://www.bilibili.com/video/BV1xx9aBPE4g/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=dbe443b875d70b7b8f918fb559cbac94" target="_blank" rel="noreferrer">
+              AIGC Microfilm: 丝路未央
+            </a>
+          </li>
+        </ul>
+      </div>
 
-  <div class="card">
-    <h2>Scriptwriting</h2>
-    <ul>
-      <li><a href="https://example.com" target="_blank" rel="noreferrer">Script Project 01 (PDF)</a></li>
-      <li><a href="https://example.com" target="_blank" rel="noreferrer">Script Project 02 (Document)</a></li>
-    </ul>
-  </div>
+      <div class="card">
+        <h2>Scriptwriting</h2>
+        <ul>
+          <li><a href="https://example.com" target="_blank" rel="noreferrer">Script Project 01 (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
